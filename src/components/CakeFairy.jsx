@@ -4,11 +4,13 @@ export default function CakeFairy({coverImg, name, price, location}) {
     return (
         <div>
             <div>
-                <img className="paparazii" src={`./src/assets/${coverImg}`}/>
+                <img className="paparazii" src={`./images/${coverImg}`}/>
                  <h3 className="location">{location === "online" ? "online" : "sold-out"}</h3>
             </div>
-            <h3 className="trip">{name}</h3>
-            <h4>{price}</h4>
+            <div className="details">
+                <h3 className="trip">{name}</h3>
+                <h4 className="price">{price}</h4>
+            </div>
         </div>
     )
 }

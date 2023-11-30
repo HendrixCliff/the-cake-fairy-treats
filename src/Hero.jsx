@@ -21,7 +21,7 @@ export default function Hero(props) {
     
 const shuffle = data.map(meme => {
     return <CakeFairy
-              key={meme.id} 
+            key={meme.id} 
             coverImg={meme.image}
             name={meme.title}
             price={meme.price}
@@ -35,7 +35,7 @@ const shuffle = data.map(meme => {
         setStartTime(Date.now());
         setNow(Date.now());
        
-        clearInterval(intervalRef.current)  //Don't actually know the purpose o this guy
+        clearInterval(intervalRef.current) 
         intervalRef.current = setInterval(()=> {
           setNow(Date.now())
         }, 10)
@@ -59,11 +59,14 @@ const shuffle = data.map(meme => {
            
             <div className="container" style ={props.moody ? {background: "#040303", color: "#9cfffa"} :  {background: ""}} >
                 <h1>Introducing <br/> The Cake Fairy </h1>
-               {/* <img src="./src/assets/cheesecake2.png"/> */}
                 <h3>Having the best pastries for your events is our priority</h3>
-                <img className="hero" src="./src/assets/hero.png"/>
-                <h3>When it comes to deserts, cake probably "takes the trophy",<br/> for being the champion
-                    of sweetness and goodness. <strong>I love it; you love it; everyone loves it!</strong>
+                <img className="hero" src="./images/hero.png"/>
+                <h3 className="word">When it comes to deserts, cake probably "takes the trophy",<br/> for being the champion
+                    of sweetness and goodness. A chocolate cake should be easy and fun to make at home with friends, family, or even 
+                    your children. It could be a perfect cake for a birthday party, friends to come over, or a Thanksgiving and Christmas party dessert.
+                    The decadent dessert is great for chocolate lovers and will hit at your next party. Cake, as we think of it is generally round, frosted,
+                     and serves to celebrate something in our lives. This is true in different cultures as well.
+                     <strong>I love it; you love it; everyone loves it!</strong>
                 </h3>
             </div>
             <div  className="wrap-paparazii">{shuffle}</div>
@@ -78,13 +81,19 @@ const shuffle = data.map(meme => {
                 <button className="stoop" onClick={handleStop}>Stop</button>
             </div> 
         </div>
-
+        <div className="baker">
+            <h3>Meet our tremendous Baker</h3>
+            <h4>Miss SANDRA SOMTOCHUWKU IGWEGBE fondly known as SANDIQWIN.</h4>
+            <img className="sandiqwin"src="./images/sandiqwin.jpg"/>
+            <h5>She is a graduate of Madonna University Elele, a Medical Scientist and a renowed bakery. She's the brain behind <b>the cake fairy treat</b>. She hails from Anambra State, Nigeria 
+            currently residing in Lagos. you can follow the bakers personal<a href="https://instagram.com/sandiqwenn?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><b className="bold"> instagram</b></a></h5>
+        </div>
      <footer className="footer" style ={styles}>
          <div >
              <a href="https://instagram.com/thecakefairy_treats?igshid=NTc4MTIwNjQ2YQ==" target="_blank">
              <h2>Follow us on!</h2>
                 <Instagram />
-                <h4 className="instagram">Instagram</h4>
+                <h4 className="instagram">Instagram</h4> 
             </a> 
             <nav>
                 <Link to='terms'><h4>Terms of Use</h4></Link>

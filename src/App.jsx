@@ -7,7 +7,7 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import { useState } from 'react'
 import Confetti from 'react-confetti'
-// import CakeFairy from "./components/CakeFairy.jsx"
+
 
 
 

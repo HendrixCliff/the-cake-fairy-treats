@@ -29,7 +29,7 @@ export default [
     },
     {
      id: "5",
-     title: "cream blue wave",
+     title: "Cream blue wave",
      location: "online",
      price: "$120",
      image: "cheesecake4.png"   
